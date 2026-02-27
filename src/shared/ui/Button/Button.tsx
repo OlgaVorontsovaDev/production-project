@@ -7,12 +7,13 @@ import { ButtonProps } from './types';
 import classes from './Button.module.scss';
 
 export const Button: FC<ButtonProps> = (props) => {
-  const { className, theme, ...otherProps } = props;
+    const { className, theme, ...otherProps } = props;
 
-  return (
-    <button
-      className={classNames(classes.button, {}, [className, classes[theme]])}
-      {...otherProps}
-    />
-  );
+    return (
+        <button
+            type="button"
+            className={classNames(classes.button, {}, [className, classes[theme]])}
+            {...otherProps}
+        />
+    );
 };

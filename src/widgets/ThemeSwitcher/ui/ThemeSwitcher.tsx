@@ -13,19 +13,20 @@ import { ThemeButton } from 'shared/ui/Button/types';
 import classes from './ThemeSwitcher.module.scss';
 
 export const ThemeSwitcher: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
-  className,
+    className,
 }) => {
-  const { toggleTheme, theme } = useTheme();
+    const { toggleTheme, theme } = useTheme();
 
-  return (
-    <Button
-      theme={ThemeButton.CLEAR}
-      onClick={toggleTheme}
-      className={classNames(classes['theme-switcher'], {}, [
-        className,
-        classes[theme],
-      ])}>
-      {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
-    </Button>
-  );
+    return (
+        <Button
+            theme={ThemeButton.CLEAR}
+            onClick={toggleTheme}
+            className={classNames(classes['theme-switcher'], {}, [
+                className,
+                classes[theme],
+            ])}
+        >
+            {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
+        </Button>
+    );
 };
