@@ -1,5 +1,8 @@
 {
   "Язык": "English",
   "Страница не найдена": "Page not found",
-  "Тоггл": "Toggle"
+  "Тоггл": "Toggle",
+  "Произошла непредвиденная ошибка": "An unexpected error occured",
+  "Обновить страницу": "Reload page",
+  "выбросить ошибку": "throw error"
 }
