@@ -49,7 +49,7 @@ jobs:
 
       - name: Upload Loki results if tests fail
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: loki-differences
           path: .loki/
