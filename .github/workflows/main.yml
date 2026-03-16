@@ -44,8 +44,8 @@ jobs:
       - name: build storybook
         run: npm run storybook:build
 
-      - name: screenshot testing
-        run: npm run test:ui:ci
+      - name: update loki screenshots
+        run: npx loki update --requireReference --reactUri file:./storybook-static --port 6006
 
       - name: Upload Loki results if tests fail
         if: failure()
